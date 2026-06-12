@@ -1,0 +1,23 @@
+{
+  "generationParameters": {
+    "generationDate": "Sun Jun 07 2026 16:31:26 GMT+0000 (Coordinated Universal Time)",
+    "generatorPlatform": "SAP Business Application Studio",
+    "serviceType": "SAP System (ABAP On-Premise)",
+    "metadataFilename": "",
+    "serviceUrl": "https://embedded-sandboxerp-s90.dest/sap/opu/odata/sap/ZUI_HPPM_HEADER_M",
+    "appName": "hppm_kpi_monitor",
+    "appTitle": "HPPM KPI Monitor",
+    "appDescription": "HPPM KPI monitor reports",
+    "appNamespace": "zvgt",
+    "ui5Theme": "sap_fiori_3",
+    "ui5Version": "1.96.32",
+    "enableEslint": true,
+    "enableTypeScript": false,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.25.0",
+    "template": "Basic V2",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [],
+    "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```"
+  }
+}

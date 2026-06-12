@@ -1,0 +1,97 @@
+<mvc:View controllerName="zvgt.hppmkpimonitor.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:smartfilterbar="sap.ui.comp.smartfilterbar"
+    xmlns:smarttable="sap.ui.comp.smarttable">
+    <f:DynamicPage id="dynamicPage">
+        <f:title>
+            <f:DynamicPageTitle id="idDynamicPageTitle" class="sapMTitleSizeLarge">
+                <f:heading>
+                    <Title id="idTitle" text="{i18n>title}" />
+                </f:heading>
+            </f:DynamicPageTitle>
+        </f:title>
+        <f:header>
+            <f:DynamicPageHeader id="idDynamicPageHeader">
+                
+                <!-- Smart Filter Bar Goods Movement-->
+                <smartfilterbar:SmartFilterBar id="idSmartFilterBarGoodsMovement" 
+                    entitySet="ZC_HPPM_GOODS_MVM_M"
+                    useToolbar="true"
+                    persistencyKey="GoodsMovementFilter" visible="{globalHPPM>/goodsMovementFilter}"/>
+
+                <!-- Smart Filter Bar Header Details-->
+                <smartfilterbar:SmartFilterBar id="idSmartFilterBarHearderDetails" 
+                    entitySet="ZC_HPPM_HEADER_M"
+                    useToolbar="false"
+                    persistencyKey="HeaderDetailsFilter" visible="{globalHPPM>/headerDetailsFilter}"/>
+                
+                <!-- Smart Filter Bar Item Details-->
+                <smartfilterbar:SmartFilterBar id="idSmartFilterBarItemDetails" 
+                    entitySet="ZC_HPPM_ITEM_M"
+                    useToolbar="false"
+                    persistencyKey="ItemDetailsFilter" visible="{globalHPPM>/itemDetailsFilter}"/>
+                
+                <!-- Smart Filter Bar Pallet Details-->
+                <smartfilterbar:SmartFilterBar id="idSmartFilterBarPalletDetails" 
+                    entitySet="ZC_HPPM_PAL_M"
+                    useToolbar="false"
+                    persistencyKey="PalletDetailsFilter" visible="{globalHPPM>/palletDetailsFilter}"/>
+            
+            </f:DynamicPageHeader>
+        </f:header>
+        <f:content>
+           
+             <IconTabBar id="idIconTabBarHPPM" selectedKey="GoodsMovement" stretchContentHeight="true" select="onIconTabBarSelect">
+                <items>
+                    
+                    <IconTabFilter id="idIconTabFilterGoodsMovement" key="GoodsMovement" text="{i18n>icon.tab.filter.text.goods_movement}">                
+                        <smarttable:SmartTable id="idSmartTableGoodsMovement"
+                            entitySet="ZC_HPPM_GOODS_MVM_M" 
+                            smartFilterId="idSmartFilterBarGoodsMovement" 
+                            showRowCount="true"
+                            header="{i18n>smart.table.header.text.goods_movement}" 
+                            enableAutoBinding="true"
+                            initialise="onInitaliseSmartTable"/>                    
+                    </IconTabFilter>
+                   
+
+                    <IconTabFilter id="idIconTabFilterHeaderDetails" key="HeaderDetails" text="{i18n>icon.tab.filter.text_header_details}">
+                        <smarttable:SmartTable 
+                            id="idSmartTableHeaderDetails" 
+                            entitySet="ZC_HPPM_HEADER_M" 
+                            smartFilterId="idSmartFilterBarHearderDetails"
+                            showRowCount="true"
+                            header="{i18n>smart.table.header.text.header_details}"
+                            enableAutoBinding="true"
+                            initialise="onInitaliseSmartTable"/>
+                    </IconTabFilter>
+
+                     <IconTabFilter id="idIconTabFilterItemDetails" key="ItemDetails" text="{i18n>icon.tab.filter.text_item_details}">
+                        <smarttable:SmartTable 
+                            id="idSmartTableItemDetails"
+                            entitySet="ZC_HPPM_ITEM_M" 
+                            smartFilterId="idSmartFilterBarItemDetails"
+                            showRowCount="true"
+                            header="{i18n>smart.table.header.text.item_details}"
+                            enableAutoBinding="true"
+                            initialise="onInitaliseSmartTable"/>                
+                    </IconTabFilter>
+
+                     <IconTabFilter id="idIconTabFilterPalletDetails" key="PalletDetails" text="{i18n>icon.tab.filter.text_pallet_details}">
+                        <smarttable:SmartTable 
+                            id="idSmartTablePalletDetails"
+                            entitySet="ZC_HPPM_PAL_M" 
+                            smartFilterId="idSmartFilterBarPalletDetails"
+                            showRowCount="true"
+                            header="{i18n>smart.table.header.text.pallet_details}"
+                            enableAutoBinding="true"
+                            initialise="onInitaliseSmartTable"/>                 
+                    </IconTabFilter>
+                
+                </items>
+            </IconTabBar>
+        </f:content>
+    </f:DynamicPage>
+</mvc:View>

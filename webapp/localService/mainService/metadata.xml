@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:Reference Uri="https://vpavs900.vetropack.corporate.ads:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="Aggregation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://vpavs900.vetropack.corporate.ads:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://vpavs900.vetropack.corporate.ads:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="Capabilities"/>
+        <edmx:Include Namespace="Org.OData.Capabilities.V1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://vpavs900.vetropack.corporate.ads:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CODELIST',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.CodeList.v1" Alias="SAP__CodeList"/>
+        <edmx:Include Namespace="com.sap.vocabularies.CodeList.v1" Alias="CodeList"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://vpavs900.vetropack.corporate.ads:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="SAP__common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://vpavs900.vetropack.corporate.ads:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://vpavs900.vetropack.corporate.ads:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CORE',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Core.V1" Alias="SAP__core"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://vpavs900.vetropack.corporate.ads:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Measures.V1" Alias="Measures"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://vpavs900.vetropack.corporate.ads:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://vpavs900.vetropack.corporate.ads:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://vpavs900.vetropack.corporate.ads:44300/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="cds_zui_hppm_header_m" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <Annotation Term="Core.SchemaVersion" String="1.0.0" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+            <EntityType Name="ZC_HPPM_GOODS_MVM_MType" sap:label="Consumption view on ZI_HPPM_GOODS_MVM_M" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="DeliveryNumber"/>
+                    <PropertyRef Name="DeliveryItem"/>
+                    <PropertyRef Name="MaterialDocument"/>
+                    <PropertyRef Name="MatDocItem"/>
+                </Key>
+                <Property Name="DeliveryNumber" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Delivery"/>
+                <Property Name="DeliveryItem" Type="Edm.String" Nullable="false" MaxLength="6" sap:display-format="NonNegative" sap:label="Item" sap:quickinfo="Delivery Item"/>
+                <Property Name="MaterialDocument" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Material Document" sap:quickinfo="Number of Material Document"/>
+                <Property Name="MatDocItem" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="NonNegative" sap:label="Material Doc.Item" sap:quickinfo="Item in Material Document"/>
+                <Property Name="MovementType" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Movement type" sap:quickinfo="Movement type (inventory management)"/>
+                <Property Name="OriginalMatDoc" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Material Document" sap:quickinfo="Number of Material Document"/>
+                <Property Name="Material" Type="Edm.String" MaxLength="18" sap:display-format="UpperCase" sap:label="Material" sap:quickinfo="Material Number"/>
+                <Property Name="QtyPosted" Type="Edm.Decimal" Precision="13" Scale="3" sap:unit="BaseUom" sap:label="HPPM Qty booked"/>
+                <Property Name="PostedBy" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="HPPM Posted By"/>
+                <Property Name="BaseUom" Type="Edm.String" MaxLength="3" sap:label="Base Unit of Measure" sap:semantics="unit-of-measure"/>
+            </EntityType>
+            <EntityType Name="ZC_HPPM_HEADER_MType" sap:label="Consumption view on ZI_HPPM_HEADER_M" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="deliv_numb"/>
+                </Key>
+                <Property Name="deliv_numb" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Delivery"/>
+                <Property Name="dlv_type" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Delivery Type"/>
+                <Property Name="load_at" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Customer" sap:quickinfo="Customer Number"/>
+                <Property Name="unload_at" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Ship-to Party"/>
+                <Property Name="vp_account" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="HPPM VP Account" sap:quickinfo="HPPM Vetropack Account"/>
+            </EntityType>
+            <EntityType Name="ZC_HPPM_ITEM_MType" sap:label="Consumption view on ZI_HPPM_ITEM_M" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="deliv_numb"/>
+                    <PropertyRef Name="deliv_item"/>
+                </Key>
+                <Property Name="deliv_numb" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Delivery"/>
+                <Property Name="deliv_item" Type="Edm.String" Nullable="false" MaxLength="6" sap:display-format="NonNegative" sap:label="Item" sap:quickinfo="Delivery Item"/>
+                <Property Name="material" Type="Edm.String" MaxLength="18" sap:display-format="UpperCase" sap:label="Material" sap:quickinfo="Material Number"/>
+                <Property Name="dlv_qty" Type="Edm.Decimal" Precision="13" Scale="3" sap:unit="base_uom" sap:label="Delivery Quantity" sap:quickinfo="Actual quantity delivered (in sales units)"/>
+                <Property Name="qty_posted" Type="Edm.Decimal" Precision="13" Scale="3" sap:unit="base_uom" sap:label="HPPM Qty booked"/>
+                <Property Name="posted_by" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="HPPM Posted By"/>
+                <Property Name="base_uom" Type="Edm.String" MaxLength="3" sap:label="Base Unit of Measure" sap:semantics="unit-of-measure"/>
+                <Property Name="dlv_type" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Delivery Type"/>
+                <Property Name="load_at" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Customer" sap:quickinfo="Customer Number"/>
+                <Property Name="unload_at" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Ship-to Party"/>
+                <Property Name="vp_account" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="HPPM VP Account" sap:quickinfo="HPPM Vetropack Account"/>
+            </EntityType>
+            <EntityType Name="ZC_HPPM_PAL_MType" sap:label="Consumption view on ZI_HPPM_PAL_M" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="DeliveryNumber"/>
+                    <PropertyRef Name="DeliveryItem"/>
+                </Key>
+                <Property Name="DeliveryNumber" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Delivery"/>
+                <Property Name="DeliveryItem" Type="Edm.String" Nullable="false" MaxLength="6" sap:display-format="NonNegative" sap:label="Item" sap:quickinfo="Delivery Item"/>
+                <Property Name="PalletNo" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="HPPM Pallet Number"/>
+                <Property Name="Material" Type="Edm.String" MaxLength="18" sap:display-format="UpperCase" sap:label="Material" sap:quickinfo="Material Number"/>
+                <Property Name="VpAccount" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="HPPM VP Account" sap:quickinfo="HPPM Vetropack Account"/>
+                <Property Name="CustomerDelivery" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Delivery"/>
+                <Property Name="LoadAt" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Customer" sap:quickinfo="Customer Number"/>
+                <Property Name="UnloadAt" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Ship-to Party"/>
+                <Property Name="InternalDelivery" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Delivery"/>
+                <Property Name="LoadAtInt" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Customer" sap:quickinfo="Customer Number"/>
+                <Property Name="UnloadAtInt" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Ship-to Party"/>
+            </EntityType>
+            <EntityType Name="SAP__Currency" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="CurrencyCode"/>
+                </Key>
+                <Property Name="CurrencyCode" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Currency" sap:semantics="currency-code"/>
+                <Property Name="ISOCode" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="ISO code"/>
+                <Property Name="Text" Type="Edm.String" Nullable="false" MaxLength="15" sap:label="Short text"/>
+                <Property Name="DecimalPlaces" Type="Edm.Byte" Nullable="false" sap:label="Decimals"/>
+            </EntityType>
+            <EntityType Name="SAP__UnitOfMeasure" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="UnitCode"/>
+                </Key>
+                <Property Name="UnitCode" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Internal UoM" sap:semantics="unit-of-measure"/>
+                <Property Name="ISOCode" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="ISO code"/>
+                <Property Name="ExternalCode" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Commercial"/>
+                <Property Name="Text" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Measurement Unit Txt"/>
+                <Property Name="DecimalPlaces" Type="Edm.Int16" sap:label="Decimal Places"/>
+            </EntityType>
+            <EntityContainer Name="cds_zui_hppm_header_m_Entities" m:IsDefaultEntityContainer="true" sap:message-scope-supported="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ZC_HPPM_GOODS_MVM_M" EntityType="cds_zui_hppm_header_m.ZC_HPPM_GOODS_MVM_MType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="ZC_HPPM_HEADER_M" EntityType="cds_zui_hppm_header_m.ZC_HPPM_HEADER_MType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="ZC_HPPM_ITEM_M" EntityType="cds_zui_hppm_header_m.ZC_HPPM_ITEM_MType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="ZC_HPPM_PAL_M" EntityType="cds_zui_hppm_header_m.ZC_HPPM_PAL_MType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="SAP__Currencies" EntityType="cds_zui_hppm_header_m.SAP__Currency" sap:content-version="1"/>
+                <EntitySet Name="SAP__UnitsOfMeasure" EntityType="cds_zui_hppm_header_m.SAP__UnitOfMeasure" sap:content-version="1"/>
+            </EntityContainer>
+            <Annotations Target="cds_zui_hppm_header_m.cds_zui_hppm_header_m_Entities" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
+            </Annotations>
+            <Annotations Target="cds_zui_hppm_header_m.cds_zui_hppm_header_m_Entities" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Org.OData.Capabilities.V1.BatchSupport">
+                    <Record Type="Org.OData.Capabilities.V1.BatchSupportType">
+                        <PropertyValue Property="ReferencesAcrossChangeSetsSupported" Bool="true"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__CodeList.CurrencyCodes">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__Currencies"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__CodeList.UnitsOfMeasure">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__UnitsOfMeasure"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zui_hppm_header_m.SAP__Currency/CurrencyCode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.Text" Path="Text"/>
+                <Annotation Term="SAP__common.UnitSpecificScale" Path="DecimalPlaces"/>
+                <Annotation Term="SAP__CodeList.StandardCode" Path="ISOCode"/>
+            </Annotations>
+            <Annotations Target="cds_zui_hppm_header_m.SAP__UnitOfMeasure/UnitCode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.Text" Path="Text"/>
+                <Annotation Term="SAP__common.UnitSpecificScale" Path="DecimalPlaces"/>
+                <Annotation Term="SAP__CodeList.StandardCode" Path="ISOCode"/>
+                <Annotation Term="SAP__CodeList.ExternalCode" Path="ExternalCode"/>
+            </Annotations>
+            <Annotations Target="cds_zui_hppm_header_m.SAP__UnitOfMeasure" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__core.AlternateKeys">
+                    <Collection>
+                        <Record>
+                            <PropertyValue Property="Key">
+                                <Collection>
+                                    <Record>
+                                        <PropertyValue Property="Name" Path="ExternalCode"/>
+                                        <PropertyValue Property="Alias" String="ExternalCode"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <atom:link rel="self" href="https://vpavs900.vetropack.corporate.ads:44300/sap/opu/odata/sap/ZUI_HPPM_HEADER_M/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="https://vpavs900.vetropack.corporate.ads:44300/sap/opu/odata/sap/ZUI_HPPM_HEADER_M/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
